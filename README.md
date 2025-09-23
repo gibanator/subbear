@@ -1,5 +1,6 @@
 # Description
-<img width="596" height="430" alt="Screenshot 2025-09-23 at 14 50 18" src="https://github.com/user-attachments/assets/1e67e30b-7737-4973-9dd9-f512988db9ea" />
+<img width="597" height="427" alt="Screenshot 2025-09-23 at 16 18 01" src="https://github.com/user-attachments/assets/0a3f82d3-8666-4490-bc73-dad3db4fb7df" />
+
 
 
 #### Attributions
