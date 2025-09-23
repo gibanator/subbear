@@ -2,11 +2,10 @@ package com.example.app.ui;
 
 import com.example.app.model.Subscription;
 import com.example.app.vm.SubscriptionListViewModel;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 
 import java.util.List;
@@ -16,19 +15,13 @@ public class SubscriptionListView extends VBox {
         TableView<Subscription> table = new TableView<>(vm.getSubscriptions());
 
         TableColumn<Subscription, String> names = new TableColumn<>("Name");
-        names.setCellValueFactory(cellData ->
-                new SimpleStringProperty(cellData.getValue().name())
-        );
+        names.setCellValueFactory(new PropertyValueFactory<>("name"));
 
         TableColumn<Subscription, Number> prices = new TableColumn<>("Price");
-        prices.setCellValueFactory(cellData ->
-                new SimpleDoubleProperty(cellData.getValue().price())
-        );
+        prices.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         TableColumn<Subscription, String> renewalDates = new TableColumn<>("Renewal");
-        renewalDates.setCellValueFactory(cellData ->
-                new SimpleStringProperty(cellData.getValue().renewalDate())
-        );
+        renewalDates.setCellValueFactory(new PropertyValueFactory<>("renewalDate"));
 
         table.getColumns().addAll(List.of(names, prices, renewalDates));
 
