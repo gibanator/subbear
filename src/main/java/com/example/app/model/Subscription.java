@@ -1,11 +1,11 @@
 package com.example.app.model;
 
 public final class Subscription{
-    private final String renewalDate;
-    private final double price;
     private final String name;
+    private final double price;
+    private final String renewalDate;
 
-    public Subscription(String renewalDate, double price, String name) {
+    public Subscription(String name, double price, String renewalDate) {
         this.renewalDate = renewalDate;
         this.price = price;
         this.name = name;
