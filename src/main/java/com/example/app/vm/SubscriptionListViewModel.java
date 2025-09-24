@@ -10,7 +10,7 @@ public class SubscriptionListViewModel {
     public SubscriptionListViewModel() {
         subscriptions.addAll(
                 new Subscription("Apple", 7.99, "2025-01-23"),
-                new Subscription("Apple", 7.99, "2025-01-23")
+                new Subscription("Youtube", 13.99, "2025-01-23")
         );
     }
 
@@ -20,5 +20,9 @@ public class SubscriptionListViewModel {
 
     public void addSubscription(Subscription sub) {
         subscriptions.add(sub);
+    }
+
+    public boolean deleteSubscription(Subscription sub) {
+        return subscriptions.remove(sub);
     }
 }
